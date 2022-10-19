@@ -35,7 +35,7 @@ public class QaAssessment {
 		        } else {
 		            throw new IllegalArgumentException("anumber out of range");
 		        }
-		        return n;
+		       return n;
 	 }
 	// Step 3
 	public static void main(String[] args) {
@@ -46,7 +46,7 @@ public class QaAssessment {
 		driver.get(url1);
 		driver.manage().window().maximize();
 		//Step 4
-		List<WebElement> listofLinks=driver.findElements(By.tagName("a"));
+		List<WebElement> listofLinks=driver.findElements(By.xpath("//a[contains(@href,'wiki')]"));
 		int count=listofLinks.size();
 		System.out.println(count);
 		//Change your Number here
